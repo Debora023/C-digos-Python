@@ -12,6 +12,17 @@ from datetime import datetime
  
 @dataclass
 
+def menu():
+    print("\n--- COMPUTARIA supports.INFO ---")
+    print("1 - Cadastro Cliente")
+    print("2 - Cadastro de serviço")
+    print("3 - Ordem de serviço")
+    print("4 - Controle de estoque")
+    print("5 - Fale conosco")
+    print("6 - Relatório")
+    print("0 - Sair")
+    return input("Escolha uma opção: ")
+
 class Cadastro_cliente:
      nome:str
      numero: str
@@ -19,6 +30,7 @@ class Cadastro_cliente:
 lista_Cadastro = []
 lista_de_Servico = []
 lista_de_Os = []
+
 class Cadastro_de_Servico:
      formatacao:str
      limpeza_geral:str
@@ -32,17 +44,6 @@ class Cadastro_de_Servico:
     cadastro_de_Servico  = Cadastro_de_Servico (formatacao,limpeza_geral,troca_de_pecas,remocao_de_virus,instalacao_de_programas)
     print("Qual o problema da sua máquina?")
     
-def menu():
-    print("\n--- COMPUTARIA supports.INFO ---")
-    print("1 - Cadastro Cliente")
-    print("2 - Cadastro de serviço")
-    print("3 - Ordem de serviço")
-    print("4 - Controle de estoque")
-    print("5 - Fale conosco")
-    print("6 - Relatório")
-    print("0 - Sair")
-    return input("Escolha uma opção: ")
-    
 while True:
     
      opcao = menu()
@@ -54,9 +55,9 @@ while True:
 
     elif opcao == "2":
         if nome is None:
-            print("Nenhum cadastro de serviço feito!")
+            print("Nenhum cadastro de serviço feito.")
         else:
-            retirar = int(input("Digite a quantidade de ingressos a retirar: "))
+            retirar = int(input("Digite a quantidade de produtos que você deseja "))
             if retirar <= 0:
                 print("A quantidade deve ser maior que zero!")
             elif retirar > quantidade:
