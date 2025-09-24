@@ -33,7 +33,7 @@ def Cadastro_de_Os():
     problema = input("Qual o problema dele")
     cadastro_de_Servico  = Cadastro_de_Servico (formatacao,limpeza_geral,troca_de_pecas,remocao_de_virus,instalacao_de_programas)
     print("Qual o problema da sua máquina?")
-
+    
 def menu():
     print("\n--- COMPUTARIA supports.INFO ---")
     print("1 - Cadastro Cliente")
@@ -47,4 +47,11 @@ def menu():
     
 while True:
     
+    opcao = menu()
     
+    if opcao == "1":
+        cadastro_cliente()
+        
+    opcao = menu()
+    if opcao == "1":
+        ()
